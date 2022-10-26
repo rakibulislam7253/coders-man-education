@@ -1,14 +1,17 @@
 import React from 'react';
+import { FaVideo } from 'react-icons/fa';
 import './coursesummary.css'
 
 const Coursesummary = ({ news }) => {
- 
-  const { _id, title, total_view, thumbnail_url, image_url, details, author, rating } = news
+
+  const { _id, title, total_view, thumbnail_url, image_url, details, author, rating, video } = news
   return (
+  
     <div className='courseitem mt-5'>
       <div class="card mb-3 " style={{ width: '580px' }}>
         <div class="row g-0">
           <div class="col-md-4 image">
+          {/* <video src={video} class="img-fluid rounded-start" alt="..." ></video> */}
             <img src={image_url} class="img-fluid rounded-start" alt="..." />
           </div>
           <div class="col-md-8">

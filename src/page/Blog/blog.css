@@ -1,0 +1,22 @@
+.blog{
+
+    width: 800px;
+    height: auto;
+    background-color: rgb(249, 234, 234);
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.blog h3{
+    color: darkgreen;
+    font-family: 'Times New Roman', Times, serif;
+}
+.blog h6{
+
+    font-family: 'Times New Roman', Times, serif;
+}
+.blogbody
+{
+    
+}
