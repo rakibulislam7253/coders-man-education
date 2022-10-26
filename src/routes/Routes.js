@@ -9,6 +9,7 @@ import Faq from "../page/Faq/Faq";
 import Getpremium from "../page/Get-premium/Getpremium";
 import Home from "../page/Home/Home";
 import Login from "../page/Login/Login";
+import Tremsandconsition from "../page/others/Trems/Tremsandconsition";
 import Register from "../page/Register/Register";
 
 
@@ -46,6 +47,10 @@ export const router = createBrowserRouter([
                 path: '/register',
                 element:<Register></Register>
             },
+            {
+                path:'/terms',
+                element:<Tremsandconsition></Tremsandconsition>
+            }
          
         ]
 

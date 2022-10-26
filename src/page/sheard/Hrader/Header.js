@@ -7,14 +7,11 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { FaUser } from "react-icons/fa";
 
-import {useState} from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Autcontext } from '../../../context/Authprovider/Authprovider';
+
 const Header = () => {
-
-
-
-
     const { user, logout } = useContext(Autcontext)
     const handellogout = () => {
         logout()
@@ -22,10 +19,10 @@ const Header = () => {
             .catch(error => console.error(error))
     }
     return (
-        <div>
+        <div className='toppart' >
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
                 <Container>
-                    <Link to={'/'}><Navbar.Brand >React-Bootstrap</Navbar.Brand></Link>
+                    <Link className='edtech' to={'/'}><Navbar.Brand className='fs-3' >Online Course</Navbar.Brand></Link>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
@@ -38,32 +35,33 @@ const Header = () => {
 
                         </Nav>
                         <Nav>
-                            <Nav.Link > <Link to={'/course'}>Course</Link></Nav.Link>
-                            <Nav.Link > <Link to={'/getpremium'}>Get-Premium</Link></Nav.Link>
-                            <Nav.Link > <Link to={'/blog'}>Blog</Link></Nav.Link>
-                            <Nav.Link > <Link to={'/faq'}>Faq</Link></Nav.Link>
-                           
-                            
-                        
+                            <Nav.Link > <Link className='textdecoration' to={'/course'}>Course</Link></Nav.Link>
+                            <Nav.Link > <Link className='textdecoration' to={'/getpremium'}>Get-Premium</Link></Nav.Link>
+                            <Nav.Link > <Link className='textdecoration' to={'/blog'}>Blog</Link></Nav.Link>
+                            <Nav.Link > <Link className='textdecoration' to={'/faq'}>Faq</Link></Nav.Link>
+
+
+
                             <Nav.Link eventKey={2} href="#memes">
 
                                 {
                                     user?.uid ?
-                                    <> 
-                                    {/* <img className='rounded-circle image' src={user.photoURL} alt="" title={user.displayName} /> */}
-                                    <button onClick={handellogout} >Logout</button>
-                                   
-                                    </>
-                                      
+                                        <>
+                                            <img className='rounded-circle image' src={user.photoURL} alt="" title={user.displayName} />
+                                            <button onClick={handellogout} className='mx-2 btn btn-outline-primary' >Logout</button>
+
+                                        </>
+
                                         :
                                         <>
-                                        <Link to={'/login'}>Login</Link>
-                                        <Link to={'/register'} className='mx-2' >Register</Link> 
-                                        {/* <Button variant="outline-warning"> <Link to={'/login'}>Login</Link> </Button>
+                                            <Link className='textdecoration  mx-2 btn btn-outline-warning' to={'/login'}>Login</Link>
+                                            <Link className='textdecoration mx-2  btn btn-outline-warning' to={'/register'}  >Register</Link>
+                                            {/* <Button variant="outline-warning"> <Link to={'/login'}>Login</Link> </Button>
                                         <Button variant="outline-warning"> <Link to={'/register'}>Register</Link> </Button> */}
-                                        <FaUser></FaUser>
+                                            <FaUser></FaUser>
+                                            
                                         </>
-                                        
+
                                 }
                             </Nav.Link>
                         </Nav>

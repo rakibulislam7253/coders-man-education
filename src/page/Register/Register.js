@@ -6,8 +6,9 @@ import { Link, useNavigate } from 'react-router-dom';
 import { Autcontext } from '../../context/Authprovider/Authprovider';
 const Register = () => {
     const [error, seterror] = useState('')
+    const [accepted, setaccepted] = useState(false)
     const navigate = useNavigate()
-    const { createuser } = useContext(Autcontext)
+    const { createuser,updateuserprofile } = useContext(Autcontext)
     const handelsubmit = (event) => {
         event.preventDefault();
         const form = event.target
@@ -16,8 +17,7 @@ const Register = () => {
         const email = form.email.value
         const password = form.password.value
         console.log(name, photoURL, email, password)
-        if(password.length<6)
-        {
+        if (password.length < 6) {
             seterror('Password should be 6 characters ')
             return
         }
@@ -27,6 +27,7 @@ const Register = () => {
                 console.log(user)
                 form.reset()
                 seterror('')
+                handelupdateuserprofile(name,photoURL);
                 navigate('/login')
             })
             .catch(error => {
@@ -34,6 +35,24 @@ const Register = () => {
                 seterror(error.message)
             })
 
+    }
+
+    const handelupdateuserprofile=(name,photoURL)=>
+    {
+        const profile={
+            displayName:name,
+            photoURL:photoURL
+        }
+        updateuserprofile(profile)
+        .then(()=>{ })
+        
+        .catch(error => {
+            console.error(error)
+        })
+    }
+
+    const handelaccep = (event) => {
+        setaccepted(event.target.checked)
     }
 
     return (
@@ -60,8 +79,18 @@ const Register = () => {
                         <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
                         <input type="password" name='password' placeholder='password' required className="form-control" id="exampleInputPassword1" />
                     </div>
-
-                    <button type="submit" className="btn btn-primary">Register</button>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox"  onClick={handelaccep} class="form-check-input" id="exampleCheck1" />
+                       
+                        <label  >
+                            {
+                                <>
+                                    Accept <Link to={'/terms'}>Treams and consitions</Link>
+                                </>
+                            }
+                        </label>
+                    </div>
+                    <button type="submit" disabled={!accepted} className="btn btn-primary">Register</button>
                     {/* <Button onClick={handelgoogle} variant="outline-primary"><FaGoogle></FaGoogle> Login with google</Button> */}
                 </div>
                 <p>Already have an account?<Link to={'/login'}>Log in</Link> </p>
