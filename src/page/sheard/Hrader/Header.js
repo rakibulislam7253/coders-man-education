@@ -22,17 +22,13 @@ const Header = () => {
         <div className='toppart' >
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
                 <Container>
-                <img className='logoimg' src={logo} alt="" srcset="" />
+                    <img className='logoimg' src={logo} alt="" srcset="" />
                     <Link className='edtech' to={'/'}><Navbar.Brand className='fs-3' >Online Course</Navbar.Brand></Link>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
 
-                            {/* <Nav.Link > <Link to={'/course'}>Course</Link></Nav.Link>
-                            <Nav.Link > <Link to={'/getpremium'}>Get-Premium</Link></Nav.Link>
-                            <Nav.Link > <Link to={'/blog'}>Blog</Link></Nav.Link>
-                            <Nav.Link > <Link to={'/faq'}>Faq</Link></Nav.Link> */}
-
+    
 
                         </Nav>
                         <Nav>
@@ -61,9 +57,15 @@ const Header = () => {
                                         <Button variant="outline-warning"> <Link to={'/register'}>Register</Link> </Button> */}
                                             <FaUser></FaUser>
                                             
+                                              
+                                            
                                         </>
 
                                 }
+                                  <label class="switch m-1">
+                                                    <input type="checkbox"/>
+                                                        <span class="slider round"></span>
+                                                </label>
                             </Nav.Link>
                         </Nav>
                     </Navbar.Collapse>

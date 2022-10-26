@@ -1,8 +1,8 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import image1 from '../../images/cover/cover-1.png';
-import image2 from '../../images/cover/cover-2.jpg';
-import image3 from '../../images/cover/cover-3.jpg';
+import image1 from '../../images/cover/cover-5.jpg';
+import image2 from '../../images/cover/cover-6.jpg';
+import image3 from '../../images/cover/cover-7.jpg';
 import image11 from '../../images/course/course-1.png';
 import image22 from '../../images/course/course-2.png';
 import image33 from '../../images/course/course-3.png';
@@ -19,7 +19,7 @@ import Footer from '../sheard/footer/Footer';
 const Home = () => {
     return (
         <div>
-            <Carousel className='mt-5'>
+            <Carousel className='mt-5 ' >
                 <Carousel.Item>
                     <img
                         className="d-block w-100"

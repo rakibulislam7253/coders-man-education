@@ -56,8 +56,8 @@ const Register = () => {
     }
 
     return (
-        <div>
-            <form onSubmit={handelsubmit} className='w-75 '>
+        <div className='d-flex justify-content-center align-items-center loginpart'>
+            <form onSubmit={handelsubmit} className='w-50  loginform'>
                 <div className='login'>
                     <h3 className='text-center'>Register</h3>
                     <div className="mb-3">

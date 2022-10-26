@@ -5,6 +5,7 @@ import { Button } from 'react-bootstrap';
 import { FaGithub, FaGoogle, FaFacebook, FaWhatsapp, FaTwitter, FaYoutube } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Autcontext } from '../../context/Authprovider/Authprovider';
+import './login.css'
 
 const Login = () => {
     const [error, seterror] = useState('')
@@ -62,9 +63,9 @@ const Login = () => {
     return (
 
         <div>
-            <div className=' d-flex justify-content-center align-items-center form '>
+            <div className=' d-flex justify-content-center align-items-center loginpart '>
 
-                <form onSubmit={handelsignin} className='w-75 '>
+                <form onSubmit={handelsignin} className='w-50 loginform'>
                     <div className='login'>
                         <h3 className='text-center'>LogIn</h3>
                         <div className="mb-3">
@@ -77,8 +78,11 @@ const Login = () => {
                             <input type="password" name='password' placeholder='password' required className="form-control" id="exampleInputPassword1" />
                         </div>
 
-                        <button type="submit" className="btn btn-info w-100">Login</button>
+                        <button type="submit" className="btn btn-primary ">Login</button>
+                        <div className='mt-4'>
                         <Button onClick={handelgoogle} variant="outline-primary"><FaGoogle></FaGoogle> Login with google</Button>
+                        </div>
+                      
                     </div>
                     <p>New to EdTech <Link to={'/register'}>create a new account</Link> </p>
                     {error}
