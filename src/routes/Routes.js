@@ -32,7 +32,8 @@ export const router = createBrowserRouter([
 
             {
                 path: '/getpremium',
-                element:<PrivateRouter> <Getpremium></Getpremium> </PrivateRouter> 
+                element:<PrivateRouter> <Getpremium></Getpremium> </PrivateRouter>,
+                loader:()=>fetch(`http://localhost:5000/news`)
             },
             { 
                 path: '/faq',

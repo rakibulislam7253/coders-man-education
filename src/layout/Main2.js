@@ -1,6 +1,7 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { Outlet } from 'react-router-dom';
+import Footer from '../page/sheard/footer/Footer';
 import Header from '../page/sheard/Hrader/Header';
 import Right from '../page/sheard/right/Right';
 
@@ -10,14 +11,15 @@ const Main2 = () => {
             <Header></Header>
             <Container>
                 <Row>
-                    <Col lg='3' >
+                    <Col lg='4' >
                         <Right></Right>
                     </Col>
-                    <Col lg='9'>
+                    <Col lg='8'>
                         <Outlet></Outlet>
                     </Col>
                 </Row>
             </Container>
+            <Footer></Footer>
 
         </div>
     );

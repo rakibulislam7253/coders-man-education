@@ -4,11 +4,16 @@
 }
 .rightpart
 {
-    width: 100%;
+    width: auto;
     height: auto;
-    background-color: lightblue;
+    background-color: skyblue;
+    margin-top: 42px;
+    padding: 20px;
+    border-radius: 10px;
 }
 .buttonpart
 {
+    /* display: grid;
+    grid-template-columns: repeat(3,1fr); */
     
 }

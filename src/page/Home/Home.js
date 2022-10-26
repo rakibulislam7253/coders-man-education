@@ -1,16 +1,19 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import image1 from '../../images/cover/cover-1.png';
-import image2 from '../../images/cover/cover-2.jpg'
-import image3 from '../../images/cover/cover-3.jpg'
-import image11 from '../../images/course/course-1.png'
-import image22 from '../../images/course/course-2.png'
-import image33 from '../../images/course/course-3.png'
-import student1 from '../../images/student/student-1.png'
-import student2 from '../../images/student/student-2.png'
-import student3 from '../../images/student/student-3.png'
-import student4 from '../../images/student/student-4.png'
+import image2 from '../../images/cover/cover-2.jpg';
+import image3 from '../../images/cover/cover-3.jpg';
+import image11 from '../../images/course/course-1.png';
+import image22 from '../../images/course/course-2.png';
+import image33 from '../../images/course/course-3.png';
+import student1 from '../../images/student/student-1.png';
+import student2 from '../../images/student/student-2.png';
+import student3 from '../../images/student/student-3.png';
+import student4 from '../../images/student/student-4.png';
+import './home.css';
 import { Link } from 'react-router-dom';
+import { FaFacebook, FaTwitter, FaYoutube } from 'react-icons/fa';
+import Footer from '../sheard/footer/Footer';
 // import image2 from '../../images/cover/cover-2.png';
 // import image3 from '../../images/cover/cover-3.png';
 const Home = () => {
@@ -24,8 +27,8 @@ const Home = () => {
                         alt="First slide"
                     />
                     <Carousel.Caption>
-                        <h3>First slide label</h3>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        <h2 className='text-primary'>Explore your skill</h2>
+                        { <p className='text-primary'>Modern and clean logo template in various vector formats - AI, EPS & PSD</p> }
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -36,9 +39,9 @@ const Home = () => {
                     />
 
                     <Carousel.Caption>
-                        <h3>Second slide label</h3>
+                        <h2 className='text-primary'>Believe in yourself and you will be unstoppable.</h2>
 
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p className='text-primary'>If you’re looking for some Catchy Inspirational Slogans there’s a whole article dedicated</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -49,9 +52,9 @@ const Home = () => {
                     />
 
                     <Carousel.Caption>
-                        <h3>Third slide label</h3>
-                        <p>
-                            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+                        <h2 className='text-primary'>Make Sure Your Favorites Course</h2>
+                        <p className='text-primary'>
+                        Modern and clean logo template in various vector formats - AI, EPS & PSD
                         </p>
                     </Carousel.Caption>
                 </Carousel.Item>
@@ -202,10 +205,10 @@ const Home = () => {
 
 
                 </div>
-                <div class="d-flex justify-content-center my-5">
-                    <button type="button" class="btn btn-primary btn-lg .fs-2 fw-bold">View All</button>
-                </div>
+
             </section >
+            {/* <Footer></Footer> */}
+
         </div>
     );
 };

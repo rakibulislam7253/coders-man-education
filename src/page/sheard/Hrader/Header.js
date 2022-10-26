@@ -6,7 +6,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { FaUser } from "react-icons/fa";
-
+import logo from '../../../images/company/logo.jpg';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Autcontext } from '../../../context/Authprovider/Authprovider';
@@ -22,6 +22,7 @@ const Header = () => {
         <div className='toppart' >
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
                 <Container>
+                <img className='logoimg' src={logo} alt="" srcset="" />
                     <Link className='edtech' to={'/'}><Navbar.Brand className='fs-3' >Online Course</Navbar.Brand></Link>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">

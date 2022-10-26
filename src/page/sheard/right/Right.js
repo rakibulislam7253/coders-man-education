@@ -13,8 +13,9 @@ const Right = () => {
     }, [])
     return (
         <div className='rightpart'>
+            <h3 className='text-center'> <u>All courses</u></h3>
             <div className='buttonpart'>
-                <h4>All course</h4>
+                
                 {
                     categories.map(category => <p
                         key={category.id}>

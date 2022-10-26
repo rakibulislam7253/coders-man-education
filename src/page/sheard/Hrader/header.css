@@ -2,11 +2,11 @@
 margin-left: 10px;
 
 }
-.toppart
+/* .toppart
 {
     position: sticky;
 top: 0;
-}
+} */
 .image
 {
     width: 40px;
@@ -25,9 +25,14 @@ top: 0;
     color: white;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 18px;
-    margin-left: 5px;
+    margin-left: 10px;
 }
-
+.logoimg{
+    width: 50px;
+    height: 50px;
+    border-radius: 40px;
+    padding: 5px;
+}
 .reg{
     text-decoration: none;
 }
