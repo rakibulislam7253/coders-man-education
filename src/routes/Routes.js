@@ -12,7 +12,6 @@ import Login from "../page/Login/Login";
 import Tremsandconsition from "../page/others/Trems/Tremsandconsition";
 import Register from "../page/Register/Register";
 
-
 import Header from "../page/sheard/Hrader/Header";
 import PrivateRouter from "./PrivateRouter/PrivateRouter";
 
