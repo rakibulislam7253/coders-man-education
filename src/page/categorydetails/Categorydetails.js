@@ -18,7 +18,7 @@ const Categorydetails = ({ detailss }) => {
 
                     </Card.Text>
                 <h5>Price:{Price}</h5>
-                    <Button variant="primary">Go somewhere</Button>
+                    <Button variant="danger">Download PDF</Button>
                 </Card.Body>
             </Card>
         </div>

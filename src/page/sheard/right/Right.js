@@ -7,7 +7,7 @@ import './right.css'
 const Right = () => {
     const [categories, setcategories] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/categories')
+        fetch('https://coders-man-education-server.vercel.app/categories')
             .then(res => res.json())
             .then(data => setcategories(data))
     }, [])

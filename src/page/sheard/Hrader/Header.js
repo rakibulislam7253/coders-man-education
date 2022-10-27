@@ -10,6 +10,7 @@ import logo from '../../../images/company/logo.jpg';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Autcontext } from '../../../context/Authprovider/Authprovider';
+import Right from '../right/Right';
 
 const Header = () => {
     const { user, logout } = useContext(Autcontext)
@@ -68,6 +69,9 @@ const Header = () => {
                                                 </label>
                             </Nav.Link>
                         </Nav>
+                        <div className='d-lg-none'>
+                            <Right></Right>
+                        </div>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>

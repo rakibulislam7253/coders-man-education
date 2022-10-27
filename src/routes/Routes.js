@@ -30,10 +30,10 @@ export const router = createBrowserRouter([
 
             {
                 path: '/getpremium',
-                element:<PrivateRouter> <Getpremium></Getpremium> </PrivateRouter>,
-                loader:()=>fetch(`http://localhost:5000/news`)
+                element: <PrivateRouter> <Getpremium></Getpremium> </PrivateRouter>,
+                loader: () => fetch(`https://coders-man-education-server.vercel.app/news`)
             },
-            { 
+            {
                 path: '/faq',
                 element: <Faq></Faq>
             },
@@ -44,13 +44,13 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/register',
-                element:<Register></Register>
+                element: <Register></Register>
             },
             {
-                path:'/terms',
-                element:<Tremsandconsition></Tremsandconsition>
+                path: '/terms',
+                element: <Tremsandconsition></Tremsandconsition>
             }
-         
+
         ]
 
     },
@@ -63,12 +63,12 @@ export const router = createBrowserRouter([
             {
                 path: '/course',
                 element: <Course></Course>,
-                loader: () => fetch('http://localhost:5000/news')
+                loader: () => fetch('https://coders-man-education-server.vercel.app/news')
             },
             {
                 path: '/category/:id',
                 element: <Category> </Category>,
-                loader: ({ params }) => fetch(`http://localhost:5000/category/${params.id}`)
+                loader: ({ params }) => fetch(`https://coders-man-education-server.vercel.app/category/${params.id}`)
             },
             {
                 path: '/coursename/:id',
@@ -77,5 +77,12 @@ export const router = createBrowserRouter([
 
         ]
     },
+    {
+        path: "*",
+        element:
+            <div>
+                <h2>404 error page</h2>
+            </div>
+    }
 
 ])
